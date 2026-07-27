@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "name": "core",
+  "name": "se.ecms.dist",
   "documents": [
     {
       "name": "Article",
@@ -219,12 +219,15 @@
         "links": [
           {
             "name": "Image reference",
-            "description": "Link to the image document",
-            "declares": {"rel":"image", "type":"core/image"},
+            "description": "Link to the image resource",
+            "declares": {"rel":"image"},
             "count": 1,
             "attributes": {
-              "uuid": {},
-              "uri": {"glob":["core://image/*"]}
+              "type": {
+                "enumReference": "core://image-types"
+              },
+              "uuid": {"optional": true},
+              "uri": {}
             }
           },
           {
@@ -234,6 +237,20 @@
             "attributes": {
               "title": {},
               "uuid": {}
+            }
+          },
+          {
+            "name": "Rendition",
+            "description": "Asset CDN rendition of the image",
+            "declares": {"rel":"rendition"},
+            "attributes": {
+              "name": {},
+              "type": {"optional": true},
+              "url": {}
+            },
+            "data": {
+              "width": {"format":"int", "optional": true},
+              "height": {"format":"int", "optional": true}
             }
           }
         ]
@@ -687,6 +704,15 @@
     }
   ],
   "enums": [
+    {
+      "declare": "core://image-types",
+      "name": "Image types",
+      "values": {
+        "core/image": {
+          "description": "Image document/asset in the repository"
+        }
+      }
+    },
     {
       "declare": "core://text-roles",
       "name": "Text block roles",

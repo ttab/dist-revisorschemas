@@ -1,4 +1,4 @@
-package publicrevisorschemas
+package distrevisorschemas
 
 import (
 	"embed"
@@ -14,7 +14,7 @@ func init() {
 	}
 
 	for _, m := range info.Deps {
-		if m.Path != "github.com/ttab/public-revisorschemas" {
+		if m.Path != "github.com/ttab/dist-revisorschemas" {
 			continue
 		}
 

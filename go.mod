@@ -1,4 +1,4 @@
-module github.com/ttab/public-revisorschemas
+module github.com/ttab/dist-revisorschemas
 
 go 1.25.5
 

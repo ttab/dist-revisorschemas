@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "name": "tt",
+  "name": "se.tt.dist",
   "enums": [
     {
       "name": "Text roles",
@@ -10,6 +10,15 @@
         "heading-3": {"forbidden":true},
         "heading-4": {"forbidden":true},
         "vignette": {}
+      }
+    },
+    {
+      "name": "Image types",
+      "description": "Adds TT picture and graphic resources as image types.",
+      "match": "core://image-types",
+      "values": {
+        "tt/picture": {"description": "Picture in the TT image archive"},
+        "tt/graphic": {"description": "Graphic/illustration in the TT image archive"}
       }
     }
   ],
@@ -83,9 +92,6 @@
             "uuid": {}
           }
         }
-      ],
-      "content": [
-        {"ref": "tt://visual"}
       ]
     },
     {
@@ -109,9 +115,6 @@
           }
         }
       ],
-      "content": [
-        {"ref": "tt://visual"}
-      ],
       "meta": [
         {
           "ref": "tt://slugline",
@@ -133,46 +136,6 @@
             "hints": {"alias": ["slug"]}
           }
         }
-      }
-    }
-  ],
-  "content": [
-    {
-      "id": "tt://visual",
-      "block": {
-        "name": "TT visual element",
-        "description": "This can be either a picture or a graphic",
-        "declares": {"type":"tt/visual"},
-        "data": {
-          "html_caption": {
-            "format": "html",
-            "allowEmpty": true,
-            "optional": true
-          }
-        },
-        "meta": [
-          {"ref": "core://softcrop"}
-        ],
-        "links": [
-          {
-            "name": "Self-link",
-            "description": "Self-link pointing to the picture or graphic resource.",
-            "declares": {"rel":"self"},
-            "count": 1,
-            "attributes": {
-              "uri": {},
-              "url": {},
-              "type": {
-                "enum": ["tt/picture", "tt/graphic"]
-              }
-            },
-            "data": {
-              "credit": {},
-              "height": {"format":"int"},
-              "width": {"format":"int"}
-            }
-          }
-        ]
       }
     }
   ]

@@ -1,4 +1,4 @@
-package publicrevisorschemas_test
+package distrevisorschemas_test
 
 import (
 	"encoding/json"

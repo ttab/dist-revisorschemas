@@ -14,21 +14,19 @@
     },
     {
       "id": "1ab95ce4-7029-46d6-b5b7-0ac5499897de",
-      "type": "tt/visual",
+      "type": "core/image",
       "data": {
-        "html_caption": "Bildtext."
+        "text": "Bildtext.",
+        "html_caption": "Bildtext.",
+        "credit": "Namn P Fotograf",
+        "height": "4757",
+        "width": "7072"
       },
       "links": [
         {
           "uri": "http://tt.se/media/image/sdlZpm8L2PMuD8",
-          "url": "https://app.stage.tt.se/media/image/sdlZpm8L2PMuD8_NormalPreview.jpg",
           "type": "tt/picture",
-          "data": {
-            "credit": "Namn P Fotograf",
-            "height": "4757",
-            "width": "7072"
-          },
-          "rel": "self"
+          "rel": "image"
         }
       ]
     },

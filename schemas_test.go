@@ -1,4 +1,4 @@
-package publicrevisorschemas_test
+package distrevisorschemas_test
 
 import (
 	"bytes"
@@ -11,12 +11,12 @@ import (
 	"testing"
 
 	"github.com/ttab/newsdoc"
-	publicrevisorschemas "github.com/ttab/public-revisorschemas"
+	distrevisorschemas "github.com/ttab/dist-revisorschemas"
 	"github.com/ttab/revisor"
 )
 
 func TestFS_ValidSchemas(t *testing.T) {
-	schemaFS := publicrevisorschemas.Files()
+	schemaFS := distrevisorschemas.Files()
 
 	files, err := schemaFS.ReadDir(".")
 	if err != nil {
@@ -97,7 +97,7 @@ func TestValidDocuments(t *testing.T) {
 func createValidator(t *testing.T) *revisor.Validator {
 	t.Helper()
 
-	schemaFS := publicrevisorschemas.Files()
+	schemaFS := distrevisorschemas.Files()
 
 	files, err := schemaFS.ReadDir(".")
 	if err != nil {
