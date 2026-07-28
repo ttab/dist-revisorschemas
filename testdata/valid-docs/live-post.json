@@ -1,0 +1,95 @@
+{
+  "uuid": "0b5f4d3c-8f2a-4f2e-9c1d-6a7b8c9d0e1f",
+  "type": "tt/live-post",
+  "title": "Målet kom i 89:e minuten",
+  "content": [
+    {
+      "id": "c1a2b3c4-0001-4000-8000-000000000001",
+      "type": "core/text",
+      "data": {
+        "text": "Målet kom i 89:e minuten"
+      },
+      "role": "heading-1"
+    },
+    {
+      "id": "c1a2b3c4-0002-4000-8000-000000000002",
+      "type": "core/text",
+      "data": {
+        "text": "Efter en <strong>lång</strong> press lyckades hemmalaget till slut."
+      }
+    },
+    {
+      "id": "c1a2b3c4-0003-4000-8000-000000000003",
+      "type": "core/image",
+      "data": {
+        "text": "Jublet efter segermålet.",
+        "html_caption": "Jublet efter <em>segermålet</em>.",
+        "alttext": "Spelare som jublar på en fotbollsplan.",
+        "credit": "Namn P Fotograf",
+        "height": "3168",
+        "width": "4752"
+      },
+      "links": [
+        {
+          "uri": "http://tt.se/media/image/sdlZpm8L2PMuD8",
+          "type": "tt/picture",
+          "rel": "image"
+        },
+        {
+          "name": "thumbnail",
+          "type": "image/jpeg",
+          "rel": "rendition",
+          "url": "https://assets.tt.se/image/sdlZpm8L2PMuD8/thumbnail.jpg",
+          "data": {
+            "width": "480",
+            "height": "320"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c1a2b3c4-0004-4000-8000-000000000004",
+      "type": "core/unordered-list",
+      "content": [
+        {
+          "id": "c1a2b3c4-0005-4000-8000-000000000005",
+          "type": "core/text",
+          "data": {
+            "text": "Fyra hörnor i rad"
+          }
+        },
+        {
+          "id": "c1a2b3c4-0006-4000-8000-000000000006",
+          "type": "core/text",
+          "data": {
+            "text": "Ett byte i 85:e"
+          }
+        }
+      ]
+    }
+  ],
+  "meta": [
+    {
+      "type": "core/note",
+      "data": {
+        "text": "Uppdaterad med citat efter matchen."
+      },
+      "role": "public"
+    }
+  ],
+  "links": [
+    {
+      "uuid": "d18288d8-2582-4c6d-83ed-7403c61259cd",
+      "type": "core/story",
+      "title": "Allsvenskan 2026",
+      "rel": "subject"
+    },
+    {
+      "uri": "tt://content-source/tt",
+      "type": "core/content-source",
+      "title": "TT",
+      "rel": "source"
+    }
+  ],
+  "language": "sv-se"
+}

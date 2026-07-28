@@ -1,0 +1,86 @@
+[
+  {
+    "entity": [
+      {
+        "refType": "attribute",
+        "name": "role"
+      },
+      {
+        "refType": "block",
+        "kind": "meta",
+        "type": "core/note"
+      }
+    ],
+    "error": "must be \"public\""
+  },
+  {
+    "entity": [
+      {
+        "refType": "attribute",
+        "name": "role"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "type": "core/text"
+      }
+    ],
+    "error": "\"heading-3\" is no longer allowed"
+  },
+  {
+    "entity": [
+      {
+        "refType": "block",
+        "kind": "content",
+        "index": 1,
+        "type": "core/table"
+      }
+    ],
+    "error": "undeclared block type or rel"
+  },
+  {
+    "entity": [
+      {
+        "refType": "attribute",
+        "name": "type"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "index": 1,
+        "type": "core/table"
+      }
+    ],
+    "error": "undeclared block attribute"
+  },
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "meta"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "index": 1,
+        "type": "core/table"
+      }
+    ],
+    "error": "unknown attribute"
+  },
+  {
+    "entity": [
+      {
+        "refType": "data attribute",
+        "name": "tbody"
+      },
+      {
+        "refType": "block",
+        "kind": "content",
+        "index": 1,
+        "type": "core/table"
+      }
+    ],
+    "error": "unknown attribute"
+  }
+]

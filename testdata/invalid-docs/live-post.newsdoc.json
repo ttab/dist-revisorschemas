@@ -1,0 +1,33 @@
+{
+  "uuid": "0b5f4d3c-8f2a-4f2e-9c1d-6a7b8c9d0e1f",
+  "type": "tt/live-post",
+  "title": "Målet kom i 89:e minuten",
+  "content": [
+    {
+      "id": "c1a2b3c4-0001-4000-8000-000000000001",
+      "type": "core/text",
+      "data": {
+        "text": "Efter matchen"
+      },
+      "role": "heading-3"
+    },
+    {
+      "id": "c1a2b3c4-0002-4000-8000-000000000002",
+      "type": "core/table",
+      "data": {
+        "meta": "",
+        "tbody": "<tr><td>Hemma</td><td>2</td></tr>"
+      }
+    }
+  ],
+  "meta": [
+    {
+      "type": "core/note",
+      "data": {
+        "text": "Detta är intern info"
+      },
+      "role": "internal"
+    }
+  ],
+  "language": "sv-se"
+}
