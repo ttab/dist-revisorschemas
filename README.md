@@ -16,7 +16,7 @@ carry signed asset-CDN renditions rather than raw repository URLs).
 | `se.ecms.dist.planning.json` | `se.ecms.dist.planning` | planning documents |
 | `se.tt.dist.json` | `se.tt.dist` | TT customisations of `se.ecms.dist` |
 | `se.tt.dist.planning.json` | `se.tt.dist.planning` | TT planning customisations |
-| `se.tt.live.json` | `se.tt.live` | TT live blog posts |
+| `se.ecms.live.json` | `se.ecms.live` | TT live blog posts |
 
 The `se.tt.dist` set extends `se.ecms.dist`; both TT sets must be loaded
 together with their `se.ecms.dist` bases. In particular `se.tt.dist` extends
@@ -24,7 +24,7 @@ the `core://image-types` enum with `tt/picture` and `tt/graphic`, so a
 `core/image` block whose image link points at the TT image archive validates
 only when `se.tt.dist` is loaded alongside `se.ecms.dist`.
 
-`se.tt.live` declares the `tt/live-post` document type used by the live
+`se.ecms.live` declares the `core/live-post` document type used by the live
 blogging service. It only adds a document type and relies on both sets above
 for its block definitions, so it is loaded on top of them rather than instead
 of them.

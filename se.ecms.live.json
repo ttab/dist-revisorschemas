@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "name": "se.tt.live",
+  "name": "se.ecms.live",
   "documents": [
     {
       "name": "Live post",
       "description": "A single post in a live blog. Live posts are addressed by their blog and a per-blog sequential id rather than by UUID or URI, and they carry no editorial context of their own: that belongs to the blog they are posted in.",
-      "declares": "tt/live-post",
+      "declares": "core/live-post",
       "content": [
         {"ref": "core://text"},
         {"ref": "core://image"},
