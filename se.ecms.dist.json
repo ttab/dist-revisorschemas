@@ -210,8 +210,8 @@
           "credit": {
             "allowEmpty": true
           },
-          "height": {"format":"int"},
-          "width": {"format":"int"}
+          "height": {"format":"int", "optional": true},
+          "width": {"format":"int", "optional": true}
         },
         "meta": [
           {"ref": "core://softcrop"}
