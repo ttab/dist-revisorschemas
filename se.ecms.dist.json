@@ -31,7 +31,9 @@
         {"ref": "core://content-source"},
         {"ref": "core://content-source/document"},
         {"ref": "core://person"},
-        {"ref": "core://category"}
+        {"ref": "core://category"},
+        {"ref": "core://mentions"},
+        {"ref": "core://alternate-id"}
       ]
     },
     {
@@ -618,6 +620,33 @@
       }
     },
     {
+      "id": "core://mentions",
+      "block": {
+        "name": "Mentioned entity",
+        "description": "An entity mentioned in the content",
+        "declares": {"rel":"mentions"},
+        "attributes": {
+          "type": {
+            "enumReference": "core://mention-types"
+          },
+          "uuid": {"optional":true},
+          "title": {}
+        }
+      }
+    },
+    {
+      "id": "core://alternate-id",
+      "block": {
+        "name": "Alternate ID",
+        "description": "An alternate identifier for the document, e.g. a legacy delivery URI",
+        "declares": {"rel":"alternate"},
+        "attributes": {
+          "uri": {},
+          "type": {"optional":true}
+        }
+      }
+    },
+    {
       "id": "core://category",
       "block": {
           "name": "Category",
@@ -757,6 +786,15 @@
 	"region": {},
 	"province": {},
         "capital-of": {}
+      }
+    },
+    {
+      "declare": "core://mention-types",
+      "name": "Mentioned entity types",
+      "values": {
+        "core/person": {},
+        "core/organisation": {},
+        "core/place": {}
       }
     }
   ],

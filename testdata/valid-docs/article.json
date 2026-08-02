@@ -96,6 +96,27 @@
       "type": "core/content-source",
       "title": "TT",
       "rel": "source"
+    },
+    {
+      "uuid": "2f7a29e4-24ac-4b12-a8f7-052a45a2b5c9",
+      "type": "core/person",
+      "title": "Anna Andersson",
+      "rel": "mentions"
+    },
+    {
+      "type": "core/organisation",
+      "title": "Riksbanken",
+      "rel": "mentions"
+    },
+    {
+      "type": "core/place",
+      "title": "Tidaholm",
+      "rel": "mentions"
+    },
+    {
+      "uri": "http://tt.se/media/text/12345678",
+      "type": "tt/alt-id",
+      "rel": "alternate"
     }
   ],
   "language": "sv-se"
