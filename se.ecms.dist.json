@@ -58,6 +58,134 @@
       ]
     },
     {
+      "name": "Flash",
+      "description": "Flash news is used for quick breaking news items",
+      "declares": "core/flash",
+      "attributes": {
+        "title": {}
+      },
+      "content": [
+        {
+          "name": "Text",
+          "description": "A flash text block",
+          "declares": {"type": "core/text"},
+          "attributes": {
+            "role": {
+              "optional": true,
+              "enumReference": "core://flash-text-roles"
+            }
+          },
+          "data": {
+            "text": {"allowEmpty": true, "format": "html"}
+          }
+        }
+      ],
+      "links": [
+        {"ref": "core://byline"},
+        {"ref": "core://section"},
+        {"ref": "core://story"},
+        {"ref": "core://assignment"},
+        {"ref": "core://content-source"},
+        {"ref": "core://content-source/document"}
+      ]
+    },
+    {
+      "name": "Calendar event",
+      "description": "A calendar event",
+      "declares": "core/event",
+      "meta": [
+        {
+          "name": "Main metadata block",
+          "description": "Core event scheduling data",
+          "declares": {"type": "core/event"},
+          "count": 1,
+          "data": {
+            "dateGranularity": {"enum": ["date", "datetime"]},
+            "registration": {"allowEmpty": true},
+            "start": {"format": "RFC3339"},
+            "end": {"format": "RFC3339"},
+            "cancelled": {"format": "bool", "optional": true}
+          }
+        },
+        {"ref": "core://newsvalue", "count": 1},
+        {"ref": "core://definition"},
+        {"ref": "core://description"},
+        {
+          "name": "Old time",
+          "description": "The previous start time of an event that has been rescheduled",
+          "declares": {"type": "core/event-old-start"},
+          "data": {
+            "dateGranularity": {"enum": ["date", "datetime"]},
+            "start": {"format": "RFC3339"},
+            "updated": {"format": "RFC3339"}
+          }
+        }
+      ],
+      "links": [
+        {
+          "name": "Replaced by",
+          "description": "The event has been moved to another day, and has been replaced by another event document.",
+          "declares": {"type": "core/event", "rel": "replaced-by"},
+          "attributes": {"uuid": {}}
+        },
+        {
+          "name": "Organiser",
+          "description": "The organiser of the event",
+          "declares": {"rel": "organiser", "type": "core/organiser"},
+          "attributes": {
+            "uuid": {},
+            "title": {"optional": true}
+          }
+        },
+        {
+          "name": "Place",
+          "description": "The location of the event",
+          "declares": {"type": "core/place", "rel": "place"},
+          "attributes": {
+            "uuid": {},
+            "title": {}
+          }
+        },
+        {
+          "name": "Geo position",
+          "description": "A geographic point location for the event",
+          "declares": {"type": "core/geo-point", "rel": "location"},
+          "attributes": {
+            "uri": {"glob": ["geo://point/*"], "optional": true},
+            "title": {}
+          },
+          "data": {
+            "country": {"optional": true},
+            "extraInfo": {"optional": true},
+            "geometry": {"format": "wkt", "geometry": "point"},
+            "locality": {"optional": true},
+            "name": {"optional": true}
+          }
+        },
+        {
+          "name": "Story",
+          "description": "An ongoing story related to the event",
+          "declares": {"type": "core/story", "rel": "story"},
+          "attributes": {
+            "uuid": {},
+            "title": {"allowEmpty": true}
+          }
+        },
+        {
+          "name": "Category",
+          "description": "A category for the event",
+          "declares": {"type": "core/category", "rel": "category"},
+          "attributes": {
+            "uuid": {},
+            "uri": {"allowEmpty": true},
+            "title": {"allowEmpty": true}
+          }
+        },
+        {"ref": "core://section"},
+        {"ref": "core://content-source"}
+      ]
+    },
+    {
       "name": "Place",
       "description": "A geographical location",
       "declares": "core/place",
@@ -166,6 +294,55 @@
       "links": [
         {"ref":"core://evidence/wikidata"},
         {"ref":"core://evidence/webpage"}
+      ]
+    },
+    {
+      "name": "Organiser",
+      "description": "The organiser of an event",
+      "declares": "core/organiser",
+      "meta": [
+        {
+          "name": "Organiser contact information",
+          "description": "Contact details for the organiser",
+          "declares": {"type": "core/contact-info"},
+          "count": 1,
+          "data": {
+            "city": {"optional": true},
+            "country": {"optional": true},
+            "email": {"optional": true, "labels": ["keyword"]},
+            "phone": {"optional": true},
+            "streetAddress": {"optional": true},
+            "postalCode": {"optional": true}
+          }
+        },
+        {"ref": "core://definition"},
+        {"ref": "core://note"}
+      ],
+      "links": [
+        {
+          "name": "Browseable link for the organiser",
+          "description": "Usually the homepage or another resource that describes the organiser",
+          "declares": {"rel": "see-also", "type": "text/html"},
+          "attributes": {
+            "url": {}
+          }
+        },
+        {
+          "name": "Facebook page for the organiser",
+          "description": "Link to the organiser's Facebook page",
+          "declares": {"rel": "see-also", "type": "core/social+facebook"},
+          "attributes": {
+            "url": {}
+          }
+        },
+        {
+          "name": "Twitter account for the organiser",
+          "description": "The organiser's Twitter handle",
+          "declares": {"rel": "see-also", "type": "core/social+twitter"},
+          "data": {
+            "handle": {}
+          }
+        }
       ]
     }
   ],
