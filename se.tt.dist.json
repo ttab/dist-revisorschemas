@@ -55,12 +55,12 @@
       "links": [
         {
           "name": "Section",
-          "description": "Required section for flash documents.",
+          "description": "The editorial section for the flash, at most one.",
           "match": {
             "rel": {"const":"section"},
             "type": {"const":"core/section"}
           },
-          "count": 1
+          "maxCount": 1
         }
       ]
     },
@@ -71,18 +71,18 @@
       "meta": [
         {
           "ref": "tt://slugline",
-          "count": 1
+          "maxCount": 1
         }
       ],
       "links": [
         {
           "name": "Section",
-          "description": "Required section for editorial info documents.",
+          "description": "The editorial section for the notice, at most one.",
           "match": {
             "rel": {"const":"section"},
             "type": {"const":"core/section"}
           },
-          "count": 1
+          "maxCount": 1
         },
         {
           "name": "Editorial-info type",
@@ -104,7 +104,7 @@
             "type":{"const":"core/section"},
             "rel":{"const":"section"}
           },
-          "count": 1
+          "maxCount": 1
         },
         {
           "name": "Subtype",
@@ -118,7 +118,7 @@
       "meta": [
         {
           "ref": "tt://slugline",
-          "count": 1
+          "maxCount": 1
         }
       ]
     }
