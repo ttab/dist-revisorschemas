@@ -20,7 +20,6 @@
         {"ref": "core://section"},
         {"ref": "core://story"},
         {"ref": "core://category"},
-        {"ref": "core://person"},
         {"ref": "core://content-source"},
         {"ref": "core://content-source/document"}
       ]

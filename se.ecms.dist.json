@@ -30,7 +30,6 @@
         {"ref": "core://article-source"},
         {"ref": "core://content-source"},
         {"ref": "core://content-source/document"},
-        {"ref": "core://person"},
         {"ref": "core://category"},
         {"ref": "core://mentions"},
         {"ref": "core://alternate-id"}
@@ -258,33 +257,6 @@
       ]
     },
     {
-      "name": "Person",
-      "description": "Used to describe people",
-      "declares": "core/person",
-      "meta": [
-        {
-          "name": "Main metadata block",
-          "description": "Core person data",
-          "declares": {"type":"core/person"},
-          "count": 1,
-          "data": {
-            "firstName": {
-              "optional":true
-            },
-            "lastName": {
-              "optional":true
-            },
-            "title": {"optional":true}
-          }
-        },
-        {"ref":"core://definition"}
-      ],
-      "links": [
-        {"ref":"core://evidence/wikidata"},
-        {"ref":"core://evidence/webpage"}
-      ]
-    },
-    {
       "name": "Organisation",
       "description": "An organisation entity",
       "declares": "core/organisation",
@@ -308,11 +280,7 @@
           "count": 1,
           "data": {
             "city": {"optional": true},
-            "country": {"optional": true},
-            "email": {"optional": true, "labels": ["keyword"]},
-            "phone": {"optional": true},
-            "streetAddress": {"optional": true},
-            "postalCode": {"optional": true}
+            "country": {"optional": true}
           }
         },
         {"ref": "core://definition"},
@@ -325,22 +293,6 @@
           "declares": {"rel": "see-also", "type": "text/html"},
           "attributes": {
             "url": {}
-          }
-        },
-        {
-          "name": "Facebook page for the organiser",
-          "description": "Link to the organiser's Facebook page",
-          "declares": {"rel": "see-also", "type": "core/social+facebook"},
-          "attributes": {
-            "url": {}
-          }
-        },
-        {
-          "name": "Twitter account for the organiser",
-          "description": "The organiser's Twitter handle",
-          "declares": {"rel": "see-also", "type": "core/social+twitter"},
-          "data": {
-            "handle": {}
           }
         }
       ]
@@ -740,7 +692,7 @@
       "id": "core://evidence/webpage",
       "block": {
         "name": "Webpage",
-        "description": "Link to a webpage about the person",
+        "description": "Link to a webpage with supporting information",
         "declares": {"rel":"evidence", "type":"text/html"},
         "attributes": {"url":{}}
       }
@@ -781,18 +733,6 @@
         "attributes": {
           "uuid": {},
           "title": {"optional":true}
-        }
-      }
-    },
-    {
-      "id": "core://person",
-      "block": {
-        "name": "Person",
-        "description": "A person that is a subject of the content",
-        "declares": {"type": "core/person", "rel":"subject"},
-        "attributes": {
-          "uuid": {},
-          "title": {}
         }
       }
     },
