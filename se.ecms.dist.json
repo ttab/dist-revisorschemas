@@ -42,9 +42,11 @@
       "content": [
         {"ref": "core://text"},
         {"ref": "core://image"},
+        {"ref": "core://htmlembed"},
         {"ref": "core://unordered-list"},
         {"ref": "core://ordered-list"},
-        {"ref": "core://factbox"}
+        {"ref": "core://factbox"},
+        {"ref": "core://table"}
       ],
       "meta": [
         {"ref": "core://note"}
